@@ -16,11 +16,7 @@ public class PlayerController : MonoBehaviour
     public  float jumpHigh = 3f;
     public LayerMask groundLayer; //choosing a layer to check on collision 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+ 
 
     // Update is called once per frame
     void Update()

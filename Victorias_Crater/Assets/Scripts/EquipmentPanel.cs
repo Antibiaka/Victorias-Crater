@@ -9,7 +9,7 @@ public class EquipmentPanel : MonoBehaviour {
     private void OnValidate() {
         equipmentSlots = equipmentParent.GetComponentsInChildren<EquipmentSlot>(); // find all childs all our item slots
     }
-    private void Awake() {
+    private void Start() {
         for (int i = 0; i < equipmentSlots.Length; i++) {
             equipmentSlots[i].OnRightClickEvent += ItemRightClickEvent;
         }

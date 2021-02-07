@@ -16,9 +16,7 @@ public class Inventory : MonoBehaviour {
     public static Inventory instance; //create a static variable shared by all instance of class 
     
     private void Awake() {
-        for (int i = 0; i < itemSlots.Length; i++) {
-            itemSlots[i].OnRightClickEvent += ItemRightClickEvent;
-        }
+       
         if (instance != null) {
             Debug.Log("Inventory dublicate");
             return;
@@ -29,7 +27,9 @@ public class Inventory : MonoBehaviour {
     
     
     private void Start() {
-       
+        for (int i = 0; i < itemSlots.Length; i++) {
+            itemSlots[i].OnRightClickEvent += ItemRightClickEvent;
+        }
         inventory = Inventory.instance;
         inventory.onIvnentoryChangeCallback += UpdateInvUI;
     }
@@ -89,9 +89,5 @@ public class Inventory : MonoBehaviour {
     public bool InventorySpace() {
         return items.Count >= itemSlots.Length;
     }
-    private void Update() {
-        for (int i = 0; i < itemSlots.Length; i++) {
-            itemSlots[i].OnRightClickEvent += ItemRightClickEvent;
-        }
-    }
+
 }

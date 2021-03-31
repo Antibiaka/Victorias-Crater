@@ -9,7 +9,7 @@ public class PickUpController : MonoBehaviour {
     private Camera camera; // to avoid camera.maim
     public LayerMask itemLayer; //layer of our items
     public LayerMask usingLayer; //layer of our items
-    private float pickUpTime = 2f;
+    private float pickUpTime = 1f;
     [SerializeField]
     private Image pickProgress;
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,4 +26,10 @@ public class EquipableItem : MainItems {
     public float AirRegeneration;
     [Space]
     public EquipmentType EquipmentType;
+    public void Equip(PanelManager p) {
+
+    }
+    public void Unequip(PanelManager p) {
+
+    }
 }
